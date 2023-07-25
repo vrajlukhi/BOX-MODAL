@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOX MODAL</title>
+    <style>
+        form{
+            width: 250px;
+            margin: auto;
+            padding: 10px 15px;
+            border:2px solid  red;
+            background-color: aqua;
+        }
+        input{
+            display: block;
+            width: 80%;
+            margin: 15px auto;
+            padding: 4px 8px;
+            font-size: 18px;
+            border: 2px solid skyblue;
+            border-radius: 5px;
+            color: black;
+        }
+        .submit{
+            width: 40%;
+            border: 2px solid aliceblue;
+            color: aliceblue;
+            text-transform: uppercase;
+            background-color: transparent;
+            cursor: pointer;
+            transition: all 0.5s;
+            margin: auto;
+        }
+        .submit:hover{
+            background-color: green;
+            border: 2px solid green;
+        }
+        .btn button{
+            background-color: transparent;
+            padding: 5px 5px;
+            border-radius: 4px;
+            margin-top: 10px;
+            transition: all 0.5s;
+            color: black;
+            border-color: white;
+        }
+        .btn button:hover{
+            background-color: green;
+            color: white;
+            border-color: green;
+        }
+        #uimaker{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            text-align: center;
+            margin-top: 50px;
+        }
+        .input-group button{
+            margin: auto;
+            display: inline;
+        }
+        .input-group input{
+            display: inline;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+            border-radius: 25px;
+        }
+        @media (max-width:775px) {
+            #uimaker{
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+        @media (max-width:575px) {
+            #uimaker{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="Enter Your Product Name" id="name">
+        <input type="url" placeholder="Enter Your Product img" id="img">
+        <input type="number" placeholder="Enter a Price" id="price">
+        <input type="text" placeholder="Enter a Category" id="category">
+        <input type="submit" class="submit">
+    </form>
+    <div class="btn" id="btns">
+        <button id="blth">Low To High</button>
+        <button id="bhtl">High To Low</button>
+        <div class="input-group">
+            <input type="text" id="value" placeholder="search the prodcut">
+            <button id="search">search</button>
+        </div>
+    </div>
+    
+      <div id="uimaker">
+      </div>
+</body>
+<script src="index.js"></script>
+</html>
