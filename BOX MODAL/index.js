@@ -68,7 +68,12 @@ for (let i = 0; i < cat.length; i++) {
 
 let search=()=>{
   let val=document.getElementById("value").value
-  let data = products.filter((se) => se.name == val.toLowerCase());
+  let data = products.filter((se) => se.name.include(val.toLowerCase()));
   ui(data);
 }
+document.getElementById("value").addEventListener("keypress",(e)=>{
+  if(e.key=="Enter"){
+    search()
+  }
+})
 document.getElementById("search").addEventListener("click",search)
